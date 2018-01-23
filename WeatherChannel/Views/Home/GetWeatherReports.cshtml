@@ -1,0 +1,21 @@
+﻿@model IEnumerable<WeatherChannel.Models.WeatherReport>
+
+<h2>All Weather Reports</h2>
+<hr />
+<ol>
+    @foreach (var report in Model)
+    {
+        <li>
+            <ul>
+			    <li>Longitude: @Html.DisplayFor(modelItem => report.Longitude)</li>
+		        <li>Latitude: @Html.DisplayFor(modelItem => report.Latitude)</li>
+                <li>Summary: @Html.DisplayFor(modelItem => report.Summary)</li>
+                <li>Temperature: @Html.DisplayFor(modelItem => report.Temperature)</li>
+                <li>Precipitation Probability: @Html.DisplayFor(modelItem => report.precipProbability)</li>
+                <li>Cloud Coverage: @Html.DisplayFor(modelItem => report.cloudCover)</li>
+            </ul>
+        </li>
+    }
+</ol>
+
+@Html.ActionLink("Back home", "Index")
