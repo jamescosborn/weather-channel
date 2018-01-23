@@ -36,6 +36,7 @@ namespace WeatherChannel
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
+            app.UseDeveloperExceptionPage();
 
             if (env.IsDevelopment())
             {

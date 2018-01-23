@@ -1,0 +1,14 @@
+﻿@model WeatherChannel.Models.WeatherReport
+
+<h2>Request a new Weather Report</h2>
+<hr />
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Longitude)
+    @Html.TextBoxFor(model => model.Longitude)
+    @Html.LabelFor(model => model.Latitude)
+    @Html.TextBoxFor(model => model.Latitude)
+    <input type="submit" value="Request Report!" />
+}
+
+@Html.ActionLink("Back home", "Index")
